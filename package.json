@@ -1,0 +1,17 @@
+{
+  "name": "dctp-book_library_server",
+  "version": "1.0.0",
+  "description": "Here are the updated routes and examples of data for the recent operations added to the API:",
+  "main": "server.js",
+  "dependencies": {
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
