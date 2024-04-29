@@ -1,6 +1,5 @@
-Certainly! Below are the regenerated endpoints along with possible data examples for creating and manipulating the API, all in one file:
+Here are the updated routes and examples of data for the recent operations added to the API:
 
-```markdown
 # Endpoints:
 
 ## Users:
@@ -66,7 +65,6 @@ Certainly! Below are the regenerated endpoints along with possible data examples
 - URL: `/books/{bookId}`
 - Method: `DELETE`
 - Description: Delete a book by ID.
-```
 
 ### Possible Data for Creating Users:
 
@@ -96,11 +94,10 @@ Certainly! Below are the regenerated endpoints along with possible data examples
   "year": 1925,
   "pages": 180,
   "isbn": "978-0743273565",
-  "available": true
+  "available": true,
+  "loaned": false,
+  "returned": true
 }
-```
-
-```json
 {
   "title": "To Kill a Mockingbird",
   "author": "Harper Lee",
@@ -108,6 +105,9 @@ Certainly! Below are the regenerated endpoints along with possible data examples
   "year": 1960,
   "pages": 336,
   "isbn": "978-0061120084",
-  "available": true
+  "available": true,
+  "loaned": true,
+  "returned": false
 }
+
 ```

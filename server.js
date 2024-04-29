@@ -90,6 +90,22 @@ const requestHandler = function (req, res) {
       fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2));
       res.end(JSON.stringify(newUser));
     });
+  } else if (req.url === "/users/authenticate" && req.method === "POST") {
+    let body = "";
+    req.on("data", (chunk) => {
+      body += chunk.toString();
+    });
+    req.on("end", () => {
+      const { username, password } = JSON.parse(body);
+      const authenticatedUser = users.find(
+        (user) => user.username === username && user.password === password
+      );
+      if (authenticatedUser) {
+        res.end(JSON.stringify(authenticatedUser));
+      } else {
+        res.end(JSON.stringify({ error: "Authentication failed" }));
+      }
+    });
   } else if (req.url.startsWith("/users/") && req.method === "GET") {
     const userId = req.url.split("/")[2];
     const user = users.find((u) => u.id === userId);
